@@ -1,11 +1,8 @@
 .text
-.global IntegerAddSub_
-    IntegerAddSub_:
+.global IntegerAdd_
+    IntegerAdd_:
   
-        // Calculate a + b + c - d
+        // Calculate a + b
 
-        add r0,r0,r1 //r0 = a + b
-        add r0,r0,r2 //r0 = a + b + c
-        sub r0,r0,r3 //r0 = a + b + c - d
-    
-        bx lr //return to caller
+        add w0,w0,w1 //w0 = a + b
+        ret // return to caller
