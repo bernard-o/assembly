@@ -1,13 +1,12 @@
 
-Compilar arquivo Assembly
-# as -o sup.o main.s
+# Compilar arquivo Assembly
+as -o obj_asm.o asm_fonte.s
 
-Compilar arquivo C++
-# clang++ -c -o main.o main.cpp
+# Compilar arquivo C++
+clang++ -c -o obj_cpp.o cpp_fonte.cpp
 
-Linkar arquivos objeto
-# clang++ -o runme main.o sup.o
+# Linkar arquivos objeto
+clang++ -o final obj_cpp.o obj_asm.o
 
-Executar programa compilado
-# chmod +x runme
-# ./runme
+# Executar programa compilado
+chmod +x final && ./final
