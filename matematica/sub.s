@@ -1,5 +1,6 @@
 .text
-.global subtrair_
+
+    .global subtrair_ // tratar funcao como funcao global
 
     subtrair_:
 

@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
     
     int a, b, r;
     
-    a = 20; b = 10;;
+    a = 20; b = 10;
     r = subtrair_(a, b);
     cout << a << " - " << b << " = " << r;
     

@@ -1,5 +1,6 @@
 .text
-.global adicionar_
+
+    .global adicionar_ // tratar funcao como funcao global
 
     adicionar_:
 
