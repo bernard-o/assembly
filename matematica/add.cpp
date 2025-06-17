@@ -14,9 +14,9 @@ int main(int argc, char** argv) {
     r = adicionar32b_(a, b);
     cout << a << " + " << b << " = " << r;
     
-    a = 101; b = 34;
-    r = adicionar64_(a, b);
-    cout << "\n" << a << " + " << b << " = " << r;
+    long i = 101; j = 34, k;
+    k = adicionar64_(a, b);
+    cout << "\n" << i << " + " << j << " = " << k;
 
     return 0;
 }

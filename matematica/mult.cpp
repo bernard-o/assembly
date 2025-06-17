@@ -11,12 +11,13 @@ extern "C" unsigned long multiplicar64b_unsigned(unsigned int i, unsigned int j)
 int main(int argc, char** argv) {
     
     int a = 10, b = 20, r;
+    long i= 90, j = 3, k;
 
     r = multiplicar32b_(a, b);
     cout << a << " * " << b << " = " << r;
 
-    r = multiplicar64b_(a, b);
-    cout << a << " * " << b << " = " << r;
+    k = multiplicar64b_(i, j);
+    cout << i << " * " << j << " = " << k;
 
     r = multiplicar64b_signed_(a, b);
     cout << a << " * " << b << " = " << r;
