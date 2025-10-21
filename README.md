@@ -1,15 +1,21 @@
 
 
-## EXEMPLO DE COMO COMPILAR E USAR SOLUÇÕES EM ASSEMBLY COM SOLUÇÕES EM C++
+# COMO COMPILAR SOLUÇÕES EM ASSEMBLY JUNTO COM C/C++
 
-# Compilar arquivo Assembly
+## Compilar solução em Assembly
 `as -o obj_asm.o asm_fonte.s`
 
-# Compilar arquivo C++
+## Compilar solução em C/C++
+- C
+`clang -c -o obj_cpp.o cpp_fonte.c`
+- C++
 `clang++ -c -o obj_cpp.o cpp_fonte.cpp`
 
-# Linkar arquivos objeto
+## Linkar arquivos objeto
+- C
+`clang -o final obj_cpp.o obj_asm.o`
+- C++
 `clang++ -o final obj_cpp.o obj_asm.o`
 
-# Executar programa compilado
+## Permitir execução em arquivo compilado
 `chmod +x final && ./final`
