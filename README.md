@@ -6,15 +6,15 @@
 `as -o obj_asm.o asm_fonte.s`
 
 ## Compilar solução em C/C++
-- C
+- C<br>
 `clang -c -o obj_cpp.o cpp_fonte.c`
-- C++
+- C++<br>
 `clang++ -c -o obj_cpp.o cpp_fonte.cpp`
 
 ## Linkar arquivos objeto
-- C
+- C<br>
 `clang -o final obj_cpp.o obj_asm.o`
-- C++
+- C++<br>
 `clang++ -o final obj_cpp.o obj_asm.o`
 
 ## Permitir execução em arquivo compilado
