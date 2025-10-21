@@ -83,6 +83,13 @@ void snapf (float f) {
   printf ("%f\n", f);
 }
 
+#define snap(x) _Generic(
+  (x), 
+  char: snapc, 
+  int: snapi,
+  default: snapf
+) (x)
+
 
 void washer (void) {
   // Pertence a explicação de _Exit exit atexit
@@ -96,8 +103,9 @@ void sweeper (void) {
 
 int main (void)
 {
-
+  
   // _Bool
+
   _Bool yes = -1, no = 0;
   yes = yes || no;
   no = no && yes;
@@ -106,11 +114,15 @@ int main (void)
   ++no;
   printf ("%d %d\n", yes, no); // 0 1
 
+
   // _Noreturn
+
   puts ("Time is long but...");
   byebye ("... life is short", 1);
 
+
   // _Exit exit atexit
+
   int val;
   printf ("Enter an int value:");
   scanf ("%d", &val);
@@ -121,4 +133,15 @@ int main (void)
     exit (1);
   else
     _Exit (1);
+
+    
+  // _Generic
+  char c = 'y';
+  snap ('x');
+  snap ((char) 'x');
+  snap (c);
+  snap (3.1415);
+  snap (13);
+
+  return 0;
 }
