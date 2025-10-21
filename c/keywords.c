@@ -9,6 +9,8 @@ _Bool
 
 Seu valor é tratado como unsigned int, porém todo valor superior a zero é
 convertido para 1, caso contrário, 0. 
+
+Compiladores: gcc, Clang e CL 19
 */
 
 /*
@@ -21,11 +23,16 @@ conexões, não fecha arquivos, etc.
 Diferença entre _Exit(1) e exit(1)
 
 exit(1)
+
 Termina o programa de forma normal, chamando atexit, fechando conexões e 
 arquivos abertos pelo programa. 
 
 atexit
+
 Define qual função será chamada antes de programa ser fechado. 
+
+Compiladores: gcc, Clang e CL 19
+
 */
 
 /* 
@@ -37,12 +44,45 @@ Não acrescenta nenhuma capacidade real do código, mas aumenta
 sua estabilidade e segurança. 
 
 TODO: Saber se endereço de retorno é enviado para stack frame mesmo assim. 
+
+Compiladores: gcc e Clang
+
 */
 
 _Noreturn void byebye (char *msg, int ret) {
   puts (msg);
   exit (ret);
 }
+
+/*
+
+_Generic
+
+Indica ao compilador qual entidade deve ser usada com base no 
+tipo da expressão. 
+Primeiro o compilador identifica o tipo do seletor e procura 
+pela sua função correspondente. 
+Inserido a partir de C11.
+
+Compiladores: gcc, Clang e CL 19
+
+*/
+
+void snapi (int i) {
+  // Pertence a explicação de _Generic
+  printf ("%d\n", i);
+}
+
+void snapc (char c) {
+  // Pertence a explicação de _Generic
+  printf ("%c\n", c);
+}
+
+void snapf (float f) {
+  // Pertence a explicação de _Generic
+  printf ("%f\n", f);
+}
+
 
 void washer (void) {
   // Pertence a explicação de _Exit exit atexit
