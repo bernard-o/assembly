@@ -1,6 +1,6 @@
 
 
-# COMO COMPILAR SOLUÇÕES EM ASSEMBLY JUNTO COM C/C++
+# COMO COMPILAR ASSEMBLY COM C/C++
 
 ## Compilar solução em Assembly
 `as -o obj_asm.o asm_fonte.s`
