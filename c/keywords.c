@@ -16,7 +16,7 @@ convertido para 1, caso contrário, 0.
 _Exit
 
 Termina o programa de forma abrupta, não chama função atexit, não fecha 
-conexões, não fecha arquivos, etc. 
+conexões, não fecha arquivos, etc.  
 
 Diferença entre _Exit(1) e exit(1)
 
