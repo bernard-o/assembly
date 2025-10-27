@@ -51,4 +51,8 @@ Todo o conteúdo do arquivo de texto pode ser observado numa só linha, pois aqu
 - Arquivo criad no Windows aberto num S.O. baseado em Unix: 
 Ao final de cada linha do arquivo de texto pode ser observado o caractere CR, que não é necessário para quebra de linha, logo, ele não tem propósito algum ali e, caso o arquivo seja um script, este não será executado por erro de sintaxe. 
 
-- O_BINARY (binary) - 
+A função `open` possui duas flags voltadas para resolver este problema de compatibilidade entre os S.O. são elas: 
+
+- O_BINARY (binary) - O arquivo será aberto com seus dados intactos, ou seja, função `open` não buscará fazer tradução/adaptação de um arquivo criado num S.O. aberto no outro. 
+
+- O_TEXT - Os dados do arquivo serão traduzidos/adaptados para o S.O. atual antes de arquivo ser aberto. 
